@@ -4,11 +4,19 @@ public class Count {
 
     private int value;
 
+    /*
+     * this - монитор (объект Count)
+     * synchronized {} - критическая секция
+     */
     public void increment() {
-        value++;
+        synchronized (this) {
+            value++;
+        }
     }
 
-    public int get() {
-        return value;
+    public synchronized int get() {
+        synchronized (this) {
+            return value;
+        }
     }
 }
