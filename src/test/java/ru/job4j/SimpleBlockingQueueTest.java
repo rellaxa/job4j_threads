@@ -1,9 +1,7 @@
 package ru.job4j;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
+import ru.job4j.buffer.SimpleBlockingQueue;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
